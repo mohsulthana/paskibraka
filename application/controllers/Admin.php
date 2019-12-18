@@ -1,25 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends MY_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('M_kriteria');
 		$status=$this->session->userdata('status');
 		if ($status==1){
 			redirect('Login/index');
@@ -31,7 +17,9 @@ class Admin extends CI_Controller {
 
 	public function home()
 	{
-		$this->load->view('index');
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'index';
+		$this->template($this->data);
 	}
 
 	public function homepimpinan(){
@@ -50,7 +38,6 @@ class Admin extends CI_Controller {
 		public function insert_bobot(){
 		//memasukkan data ke database
 		//$nisn,$wawancara,$tertulis,$kesehatan,$postur,$jasmani
-		$this->load->model('M_kriteria');
 		$id_bobot=$_POST['id_bobot'];
 		$nama=$_POST['nama'];
 		$bobot=$_POST['bobot'];
@@ -80,21 +67,20 @@ class Admin extends CI_Controller {
 	}
 
 	public function kriteria_penilaian(){
-		$this->load->model('M_kriteria');
-		$x['data_siswa']=$this->M_kriteria->get_all_kriteria();
-		$this->load->view('kriteriabobot',$x);
+		$this->data['content']		= 'kriteriabobot';
+		$this->data['title']			= 'Kriteria Penilaian';
+		$this->data['data_siswa']	= $this->M_kriteria->get_all_kriteria();
+		$this->template($this->data);
 	}
 
 
 	public function kriteria_pimpinan(){
-		$this->load->model('M_kriteria');
 		$x['data_siswa']=$this->M_kriteria->get_all_kriteria();
 		$this->load->view('kriteria_pimpinan',$x);
 	}
 
 	public function algoritma_topsis (){
 		//deklarasi bobot
-		$this->load->model('M_kriteria');
 		$data_bobot=$this->M_kriteria->get_all_kriteria();
 
 		$bobot_kriteria = array();
@@ -697,7 +683,6 @@ class Admin extends CI_Controller {
 
 	
 		public function kriteria_penilai(){
-		$this->load->model('M_kriteria');
 		$x['data_siswa']=$this->M_kriteria->get_all_kriteria();
 		$this->load->view('kriteria_penilai',$x);
 	}
