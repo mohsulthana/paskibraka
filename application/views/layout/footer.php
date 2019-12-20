@@ -64,6 +64,12 @@
   <!-- main JS
 								============================================ -->
   <script src="<?php echo base_url() ?>js/main.js"></script>
+  <!-- Datatable -->
+  <script src="<?= asset_url('js/datatable/datatables.min.js');?>"></script>
+  <script src="<?= asset_url('js/datatable/DataTables-1.10.20/js/dataTables.bootstrap.min.js');?>"></script>
+
+  <script>
+  </script>
 </body>
 
 </html>

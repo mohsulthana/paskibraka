@@ -6,6 +6,7 @@ class Admin extends MY_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('M_kriteria');
+		$this->load->model('M_siswa');
 		$status=$this->session->userdata('status');
 		if ($status==1){
 			redirect('Login/index');
@@ -617,14 +618,14 @@ class Admin extends MY_Controller {
 
 	public function datapendaftar()
 	{
-		$this->load->model('M_siswa');
-		$x['data_siswa']=$this->M_siswa->get_all_siswa();
-		$this->load->view('datapendaftar',$x);
+		$this->data['data_siswa']	= $this->M_siswa->get_all_siswa();
+		$this->data['content']		= 'datapendaftar';
+		$this->data['title']			= 'Data Pendaftar';
+		$this->template($this->data);
 	}
 
 	public function datapendaftarpimpinan()
 	{
-		$this->load->model('M_siswa');
 		$x['data_siswa']=$this->M_siswa->get_all_siswa();
 		$this->load->view('datapendaftarpimpinan',$x);
 	}
@@ -637,7 +638,6 @@ class Admin extends MY_Controller {
 	}
 
 	public function detail(){
-		$this->load->model('M_siswa');
 		$nisn=$_POST['nisn'];
 		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
 
@@ -645,7 +645,6 @@ class Admin extends MY_Controller {
 	}
 
 		public function detailpimpinan(){
-		$this->load->model('M_siswa');
 		$nisn=$_POST['nisn'];
 		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
 
@@ -689,13 +688,11 @@ class Admin extends MY_Controller {
 
 	public function datapendaftar_penilai()
 	{
-		$this->load->model('M_siswa');
 		$x['data_siswa']=$this->M_siswa->get_all_siswa();
 		$this->load->view('datapendaftar_penilai',$x);
 	}
 
 	public function detail_penilai(){
-		$this->load->model('M_siswa');
 		$nisn=$_POST['nisn'];
 		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
 

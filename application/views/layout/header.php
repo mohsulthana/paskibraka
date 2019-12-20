@@ -59,4 +59,6 @@
 				<!-- modernizr JS
 								============================================ -->
 				<script src="<?php echo base_url() ?>js/vendor/modernizr-2.8.3.min.js"></script>
+				<!-- Datatable -->
+				<link rel="stylesheet" href="<?= asset_url('js/datatable/datatable.min.css');?>">
 </head>
