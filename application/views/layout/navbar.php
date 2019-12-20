@@ -82,10 +82,10 @@
                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                           </a>
                           <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                            <li><a href="<?php echo base_url() ?>Admin/index"><span
+                            <!-- <li><a href="<?php echo base_url() ?>Admin/index"><span
                                   class="fa fa-user author-log-ic"></span>LOGIN</a>
-                            </li>
-                            <li><a href="<?php echo base_url() ?>Admin/index"><span
+                            </li> -->
+                            <li><a href="<?php echo base_url('User/logout');?>"><span
                                   class="fa fa-lock author-log-ic"></span>Log Out</a>
                             </li>
                           </ul>

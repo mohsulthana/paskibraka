@@ -7,6 +7,7 @@ class Admin extends MY_Controller {
 		parent::__construct();
 		$this->load->model('M_kriteria');
 		$this->load->model('M_siswa');
+		$this->load->model('M_keputusan_siswa');
 		$status=$this->session->userdata('status');
 		if ($status==1){
 			redirect('Login/index');
@@ -594,7 +595,7 @@ class Admin extends MY_Controller {
 			// echo "<br>";
 			// print_r($data_all_laki_laki);
 
-			$this->load->model('M_keputusan_siswa');
+
 			for($x=0; $x<sizeof($data_all_perempuan); $x++){
 				if($x<26){
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_perempuan[$x][0],$data_all_perempuan[$x][1],"Lulus by Sistem");
@@ -661,14 +662,14 @@ class Admin extends MY_Controller {
 
 	public function perankingan()
 	{
-		$this->load->model('M_keputusan_siswa');
-		$x['lihat_ranking']=$this->M_keputusan_siswa->lihat_ranking();
-		$this->load->view('ranking',$x);
+		$this->data['title']					= 'Data Perankingan';
+		$this->data['content']				= 'ranking';
+		$this->data['lihat_ranking']	= $this->M_keputusan_siswa->lihat_ranking();
+		$this->template($this->data);
 	}
 
 		public function rankingpimpinan()
 	{
-		$this->load->model('M_keputusan_siswa');
 		$x['lihat_ranking']=$this->M_keputusan_siswa->lihat_ranking();
 		$this->load->view('rankingpimpinan',$x);
 	}
@@ -719,14 +720,12 @@ class Admin extends MY_Controller {
 	 }
 
 	public function status_lulus(){
-		$this->load->model('M_keputusan_siswa');
 		$nisn=$_POST['nisn'];
 		$this->M_keputusan_siswa->status_lulus($nisn);
 		redirect('Admin/rankingpimpinan','refresh');
 	}
 
 	public function status_tidak_lulus(){
-		$this->load->model('M_keputusan_siswa');
 		$nisn=$_POST['nisn'];
 		$this->M_keputusan_siswa->status_tidak_lulus($nisn);
 		redirect('Admin/rankingpimpinan','refresh');

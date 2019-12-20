@@ -1,7 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends MY_Controller {
+
+	public function __construct()
+	{
+		parent::__construct();
+
+		// CEK ROLE
+		if(isset($this->session->userdata()['status'])) {
+			if ($this->session->userdata()['role'] == "User") {
+				redirect('User/home','refresh');
+			} else if ($this->session->userdata()['role'] == "Admin") {
+				redirect('Admin/home','refresh');
+			} else if ($this->session->userdata()['role'] == "Pimpinan") {
+				redirect('Admin/homepimpinan','refresh');
+			} else if ($this->session->userdata()['role'] == "Sistem") {
+				redirect('Admin/home_admin_sistem','refresh');
+			}
+		}
+	}
 
 	public function index()
 	{
@@ -16,34 +34,38 @@ class Login extends CI_Controller {
 		$nama=$_POST['nama'];
 		$password=$_POST['password'];
 		$result=$this->M_user->check_user($nama,$password);
-
 		
 		if(sizeof($result)>0){
 			foreach ($result as $key => $row) {
 				if ($row['status']==1) {
+
 					$data_session = array(
-					'nisn' => $row['NISN'],
-					'status' => "1" );
+					'nisn'		=> $row['NISN'],
+					'status'	=> "1",
+					'role'		=> "User"
+				);
 
 					$this->session->set_userdata($data_session);
-					//echo "log";
 					redirect('User/home','refresh');
 				}
 
 				else if ($row['status']==2) {
 					$data_session = array(
-					'nisn' => $row['NISN'],
-					'status' => "2" );
+					'nisn'		=> $row['NISN'],
+					'status'	=> "2",
+					'role'		=> "Admin"
+				);
 
 					$this->session->set_userdata($data_session);
 					redirect('Admin/home','refresh');
 				}
 
-
 				else if ($row['status']==3) {
 					$data_session = array(
-					'nisn' => $row['NISN'],
-					'status' => "3" );
+					'nisn'		=> $row['NISN'],
+					'status'	=> "3",
+					'role'		=> "Pimpinan"
+				);
 
 					$this->session->set_userdata($data_session);
 					redirect('Admin/homepimpinan','refresh');
@@ -51,8 +73,10 @@ class Login extends CI_Controller {
 
 				else if ($row['status']==4) {
 					$data_session = array(
-					'nisn' => $row['NISN'],
-					'status' => "4" );
+					'nisn'		=> $row['NISN'],
+					'status'	=> "4",
+					'role'		=> "Sistem"
+				);
 
 					$this->session->set_userdata($data_session);
 					redirect('Admin/home_admin_sistem','refresh');
@@ -61,8 +85,10 @@ class Login extends CI_Controller {
 
 				else if ($row['status']==5) {
 					$data_session = array(
-					'nisn' => $row['NISN'],
-					'status' => "5" );
+					'nisn'		=> $row['NISN'],
+					'status'	=> "5",
+					'role'		=> "Penilai"
+				);
 
 					$this->session->set_userdata($data_session);
 					redirect('Admin/homepenilai','refresh');
