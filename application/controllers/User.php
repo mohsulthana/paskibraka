@@ -1,10 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends CI_Controller {
+class User extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->data['title']			= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->load->model('M_siswa');
+		$this->load->model('M_keputusan_siswa');
 		// $status=$this->session->userdata('status');
 		// if ($status !=1 ){
 		// 	redirect('Login/index');
@@ -13,13 +16,14 @@ class User extends CI_Controller {
 	
 	public function home()
 	{
-		$this->load->view('homeuser');
+		$this->data['content']		= 'homeuser';
+		$this->template($this->data);
 	}
 	
 	
 	public function insert_data_siswa(){
 		//memasukkan data ke database
-		$this->load->model('M_siswa');
+
 		$nisn=$this->session->userdata('nisn');
 		$email=$_POST['email'];
 		$hp=$_POST['nomorhp'];
@@ -132,7 +136,8 @@ class User extends CI_Controller {
 	{
 		$status=$this->session->userdata('status');
 		if($status==1){
-			$this->load->view('pendaftaran');
+			$this->data['content'] = 'pendaftaran';
+			$this->template($this->data);
 		}
 		else{
 			redirect('User','refresh');
@@ -143,11 +148,11 @@ class User extends CI_Controller {
 	{
 		$status=$this->session->userdata('status');
 		if($status==1){
-			$this->load->model('M_siswa');
-			$nisn=$this->session->userdata('nisn');
-			$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
-
-			$this->load->view('datadiri',$x);
+	
+			$nisn											= $this->session->userdata('nisn');
+			$this->data['data_siswa']	= $this->M_siswa->get_siswa($nisn);
+			$this->data['content']		= 'datadiri';
+			$this->template($this->data);
 		}
 		else{
 			redirect('User','refresh');
@@ -158,10 +163,11 @@ class User extends CI_Controller {
 	{
 		$status=$this->session->userdata('status');
 		if($status==1){
-				$this->load->model('M_keputusan_siswa');
-					$nisn=$this->session->userdata('nisn');
-			$x['data_siswa']=$this->M_keputusan_siswa->lihat_ranking_siswa($nisn);
-			$this->load->view('hasil',$x);
+				
+			$nisn=$this->session->userdata('nisn');
+			$this->data['data_siswa']				=	$this->M_keputusan_siswa->lihat_ranking_siswa($nisn);
+			$this->data['content']					= 'hasil';
+			$this->template($this->data);
 		}
 		else{
 			redirect('User','refresh');
@@ -170,7 +176,7 @@ class User extends CI_Controller {
 	}
 
 	public function tampilan_hasil(){
-		$this->load->model('M_keputusan_siswa');
+		
 		$x['data_siswa']=$this->M_keputusan_siswa->lihat_ranking_siswa();
 		$this->load->view('User/hasil',$x);
 	}

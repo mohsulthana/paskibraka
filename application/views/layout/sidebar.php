@@ -20,6 +20,19 @@
                 <span class="mini-click-non">Pendaftaran</span>
               </a>
               <ul class="submenu-angle" aria-expanded="true">
+
+              <?php if ($this->session->userdata()['role'] == 'User') {?>
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>User/pendaftaran"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Form
+                      Pendaftaran</span></a></li>
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>User/datadiri"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
+                      Data</span></a></li>
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>User/hasil"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
+                      Hasil</span></a>
+									</li>
+              <?php } else {?>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_penilaian"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan
                       Bobot</span></a></li>
@@ -29,9 +42,9 @@
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/perankingan"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
                       Ranking</span></a></li>
+                <?php } ?>
               </ul>
             </li>
-
           </ul>
         </nav>
       </div>
