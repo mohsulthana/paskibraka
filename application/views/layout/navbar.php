@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="logo-pro">
-            <a href="<?php echo base_url() ?>Admin/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+            <a target="_blank" href="<?php echo base_url() ?>Admin/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
           </div>
         </div>
       </div>
@@ -27,9 +27,9 @@
                   <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                     <div class="header-top-menu tabl-d-n">
                       <ul class="nav navbar-nav mai-top-nav">
-                        <li class="nav-item"><a href="<?php echo base_url() ?>home" class="nav-link">Home</a>
+                        <li class="nav-item"><a target="_blank" href="<?php echo base_url() ?>home" class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item"><a href="<?php echo base_url() ?>Admin/tentang" class="nav-link">About</a>
+                        <li class="nav-item"><a target="_blank" href="<?php echo base_url() ?>Admin/tentang" class="nav-link">About</a>
                         </li>
                       </ul>
                     </div>

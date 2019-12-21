@@ -13,10 +13,10 @@
               <div class="sparkline13-graph">
                 <div class="datatable-dashv1-list custom-datatable-overright">
 
-                  <table id="table" data-toggle="table" data-pagination="true" data-search="true"
-                    data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true"
-                    data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
+                  <table id="table" class="table table-striped" data-toggle="table" data-pagination="true"
+                    data-search="true" data-show-columns="true" data-show-pagination-switch="true"
+                    data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true"
+                    data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
                     data-toolbar="#toolbar">
                     <thead>
                       <tr>
@@ -46,15 +46,15 @@
                         <td><?php echo $row["Daerah"]; ?></td>
                         <td><?php echo $row["JK"]; ?></td>
                         <td>
-                          <form action="<?php echo base_url() ?>/Admin/detail" method="post">
+                          <form action="<?php echo base_url() ?>Admin/detail" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                             <input type="submit" value="detail" name="submit">
                           </form>
-                          <form action="<?php echo base_url() ?>/Admin/hapusdata" method="post">
+                          <form action="<?php echo base_url() ?>Admin/hapusdata" method="post">
                             <input type="submit" value="hapus" name="submit">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                           </form>
-                          <form action="<?php echo base_url() ?>/Admin/penilaian" method="post">
+                          <form action="<?php echo base_url() ?>Admin/penilaian" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                             <input type="submit" value="Input Nilai" name="submit"></form>
 
@@ -68,8 +68,8 @@
                     </tbody>
 
                   </table>
-                  <form action="<?php echo base_url() ?>/Admin/algoritma_topsis" method="post">
-                    <input type="submit" value="PROSES" name="submit"></form>
+                  <form action="<?php echo base_url() ?>Admin/algoritma_topsis" method="post">
+                    <input type="submit" class="btn btn-primary" value="PROSES" name="submit"></form>
                 </div>
               </div>
             </div>
