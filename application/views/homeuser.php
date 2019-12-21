@@ -1,6 +1,6 @@
     <!-- Batas Tanda -->
-    <img class="main-logo" align="center" src="<?php echo base_url() ?>img/paskibraka.jpeg" alt="" /></a>
-
+    <a href="<?php echo base_url() ?>Admin/home"><br>    <img class="main-logo" src="<?php echo base_url() ?>img/paskibraka.jpeg" style="display: block; margin: 50px auto;" alt="" /></a>
+    
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sparkline12-list">
         <div class="sparkline12-hd">

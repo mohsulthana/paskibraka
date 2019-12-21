@@ -43,11 +43,11 @@
                               aria-hidden="true"></i><span class="indicator-ms"></span></a>
                           <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
                             <div class="message-single-top">
-                              <h1>Apa Kata Alumni?</h1>
+                              <h1 style="color: white;">Apa Kata Alumni?</h1>
                             </div>
                             <ul class="message-menu">
                               <li>
-
+                              <a href="#">
                                 <div class="message-img">
                                   <img src="<?php echo base_url() ?>img/img_2792.jpg" alt="">
                                 </div>

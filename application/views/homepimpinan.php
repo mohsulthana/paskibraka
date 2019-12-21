@@ -1,7 +1,6 @@
 <!-- Batas Tanda -->
 <div class="logo-pro">
-  <a href="<?php echo base_url() ?>/Admin/home"><br><img class="main-logo" align="center"
-      src="<?php echo base_url() ?>img/paskibraka.jpeg" alt="" /></a>
+  <a href="<?php echo base_url() ?>Admin/home"><br>    <img class="main-logo" src="<?php echo base_url() ?>img/paskibraka.jpeg" style="display: block; margin: 50px auto;" alt="" /></a>
 </div>
 
 <div class="row">
