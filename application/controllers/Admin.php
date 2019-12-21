@@ -8,6 +8,7 @@ class Admin extends MY_Controller {
 		$this->load->model('M_kriteria');
 		$this->load->model('M_siswa');
 		$this->load->model('M_keputusan_siswa');
+		$this->load->model('M_user');
 		$status=$this->session->userdata('status');
 		if ($status==1){
 			redirect('Login/index');
@@ -653,9 +654,7 @@ class Admin extends MY_Controller {
 	}
 
 	public function hapusdata(){
-		$this->load->model('M_user');
 		$nisn=$_POST['nisn'];
-		$this->load->model('M_user');
 		$this->M_user->hapusdata($nisn);
 		redirect('Admin/datapendaftar','refresh');
 	}
@@ -732,9 +731,10 @@ class Admin extends MY_Controller {
 	}
 
 	public function lihatuser(){
-		$this->load->model('M_user');
-		$x['lihatuser']=$this->M_user->lihatuser();
-		$this->load->view('datauser',$x);
+		$this->data['lihatuser']=$this->M_user->lihatuser();
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'datauser';
+		$this->template($this->data);
 	}
 
 	public function inputuser(){
@@ -742,7 +742,6 @@ class Admin extends MY_Controller {
 	}
 
 	public function insert_user_baru(){
-		$this->load->model('M_user');
 		$nisn=$_POST['nisn'];
 		$nisn=$_POST['namalengkap'];
 		$nama=$_POST['nama'];
@@ -757,16 +756,13 @@ class Admin extends MY_Controller {
 	}
 
 	public function hapusdatauser(){
-		$this->load->model('M_user');
 		$nisn=$_POST['nisn'];
-		$this->load->model('M_user');
 		$this->M_user->hapusdatauser($nisn);
 		redirect('Admin/lihatuser','refresh');
 	}
 
 	public function update_user(){
 
-		$this->load->model('M_user');
 		$x['nisn']=$_POST['nisn'];
 		$x['data_user'] = $this->M_user->lihatuserspes($_POST['nisn']);
 
@@ -776,7 +772,6 @@ class Admin extends MY_Controller {
 	public function insert_user(){
 		//memasukkan data ke database
 		//$nisn,$wawancara,$tertulis,$kesehatan,$postur,$jasmani
-		$this->load->model('M_user');
 		$nisn=$_POST['nisn'];
 		$namalengkap=$_POST['namalengkap'];
 		$nama=$_POST['nama'];
