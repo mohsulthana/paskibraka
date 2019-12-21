@@ -25,10 +25,10 @@ class Admin extends MY_Controller {
 	}
 
 	public function homepimpinan(){
-		$this->load->view('homepimpinan');
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'homepimpinan';
+		$this->template($this->data);
 	}
-	
-	
 
 	public function input_bobot (){
 
