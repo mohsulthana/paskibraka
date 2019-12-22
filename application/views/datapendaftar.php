@@ -54,9 +54,17 @@
                             <input type="submit" value="hapus" name="submit">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                           </form>
+                          <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                           <form action="<?php echo base_url() ?>Admin/penilaian" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                             <input type="submit" value="Input Nilai" name="submit"></form>
+                          </form>
+                          <?php } else if ($this->session->userdata()['role'] === 'Penilai' ) {?>
+                          <form action="<?php echo base_url() ?>Admin/penilaian_penilai" method="post">
+                            <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
+                            <input type="submit" value="Input Nilai" name="submit"></form>
+                          </form>
+                          <?php } ?>
 
                         </td>
 

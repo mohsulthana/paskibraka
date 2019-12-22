@@ -9,6 +9,7 @@ class Admin extends MY_Controller {
 		$this->load->model('M_siswa');
 		$this->load->model('M_keputusan_siswa');
 		$this->load->model('M_user');
+		$this->load->model('M_Penilaian');
 		$status=$this->session->userdata('status');
 		if ($status==1){
 			redirect('Login/index');
@@ -73,6 +74,14 @@ class Admin extends MY_Controller {
 		$this->data['content']		= 'kriteriabobot';
 		$this->data['title']			= 'Kriteria Penilaian';
 		$this->data['data_siswa']	= $this->M_kriteria->get_all_kriteria();
+		$this->template($this->data);
+	}
+
+	public function daftarnilai()
+	{
+		$this->data['content']			= 'daftarnilai';
+		$this->data['title']				= 'Daftar nilai';
+		$this->data['data_nilai']		= $this->M_Penilaian->get_all_penilaian();
 		$this->template($this->data);
 	}
 
@@ -641,9 +650,11 @@ class Admin extends MY_Controller {
 
 	public function detail(){
 		$nisn=$_POST['nisn'];
-		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
 
-		$this->load->view('detailpeserta',$x);
+		$this->data['data_siswa']	= $this->M_siswa->get_siswa($nisn);
+		$this->data['content']		= 'detailpeserta';
+		$this->data['title']			= 'Detail Peserta';
+		$this->template($this->data);
 	}
 
 		public function detailpimpinan(){
@@ -669,15 +680,19 @@ class Admin extends MY_Controller {
 
 		public function rankingpimpinan()
 	{
-		$x['lihat_ranking']=$this->M_keputusan_siswa->lihat_ranking();
-		$this->load->view('rankingpimpinan',$x);
+		$this->data['lihat_ranking']	=$this->M_keputusan_siswa->lihat_ranking();
+		$this->data['content']				= 'rankingpimpinan';
+		$this->data['title']					= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->template($this->data);
 	}
 
 
 	
 	public function homepenilai()
 	{
-		$this->load->view('homepenilai');
+		$this->data['content']			= 'homepenilai';
+		$this->data['title']				= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->template($this->data);
 	}
 
 	
@@ -743,7 +758,7 @@ class Admin extends MY_Controller {
 
 	public function insert_user_baru(){
 		$nisn=$_POST['nisn'];
-		$nisn=$_POST['namalengkap'];
+		$namalengkap=$_POST['namalengkap'];
 		$nama=$_POST['nama'];
 		$password=$_POST['password'];
 		$status=$_POST['status'];
@@ -752,7 +767,9 @@ class Admin extends MY_Controller {
 	}
 
 	public function home_admin_sistem(){
-		$this->load->view('home_admin_sistem');
+		$this->data['content']			= 'home_admin_sistem';
+		$this->data['title']				= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->template($this->data);
 	}
 
 	public function hapusdatauser(){

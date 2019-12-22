@@ -42,6 +42,12 @@
 		}
 
 		}
+
+	function get_all_penilaian(){
+		$sql = "SELECT * from nilai";
+		$result = $this->db->query($sql)->result_array();
+		return $result;
+	}
 	
 	function get_all_penilaian_perempuan(){
 		$sql = "SELECT nilai.nisn,Tertulis,Wawancara,Kesehatan,Jasmani,Postur FROM nilai,siswa where nilai.nisn=siswa.nisn and siswa.JK='Perempuan' ";

@@ -47,7 +47,7 @@
             <a class="nav-link js-scroll-trigger" href="#tim">Tim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#kontak">Kontak</a>
+            <a class="nav-link js-scroll-trigger" href="<?= base_url('login/register')?>">Register</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="<?= base_url('login')?>">Login</a>

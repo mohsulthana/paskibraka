@@ -1,5 +1,5 @@
 <div class="logo-pro">
-  <a href="<?php echo base_url() ?>/User/home"><img class="main-logo" align="center"
+  <a href="<?php echo base_url() ?>/User/home"><img style="display: block; margin: 50px auto;" class="main-logo" align="center"
       src="<?php echo base_url() ?>img/paskibraka.jpeg" alt="" /></a>
 </div>
 

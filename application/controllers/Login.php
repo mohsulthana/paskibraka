@@ -17,6 +17,8 @@ class Login extends MY_Controller {
 				redirect('Admin/homepimpinan','refresh');
 			} else if ($this->session->userdata()['role'] == "Sistem") {
 				redirect('Admin/home_admin_sistem','refresh');
+			} else if ($this->session->userdata()['role'] == "Penilai") {
+				redirect('Admin/homepenilai', 'refresh');
 			}
 		}
 	}
