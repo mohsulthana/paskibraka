@@ -267,20 +267,20 @@ class Admin extends MY_Controller {
 		
 		foreach($ternormalisasi_terbobot_perempuan as $key => $value) {
 			$perempuan[$key] = [];
-			$perempuan[$key]['bobot_tertulis']		= $value[0];
-			$perempuan[$key]['bobot_wawancara']	= $value[1];
+			$perempuan[$key]['bobot_tertulis']		= $value[1];
+			$perempuan[$key]['bobot_wawancara']	= $value[0];
 			$perempuan[$key]['bobot_kesehatan']	= $value[2];
-			$perempuan[$key]['bobot_jasmani']		= $value[3];
-			$perempuan[$key]['bobot_postur']			= $value[4];
+			$perempuan[$key]['bobot_jasmani']		= $value[4];
+			$perempuan[$key]['bobot_postur']			= $value[3];
 		}
 		
 		foreach($ternormalisasi_terbobot_laki_laki as $key => $value) {
 			$laki_laki[$key] = [];
-			$laki_laki[$key]['bobot_tertulis']		= $value[0];
-			$laki_laki[$key]['bobot_wawancara']	= $value[1];
+			$laki_laki[$key]['bobot_tertulis']		= $value[1];
+			$laki_laki[$key]['bobot_wawancara']	= $value[0];
 			$laki_laki[$key]['bobot_kesehatan']	= $value[2];
-			$laki_laki[$key]['bobot_jasmani']		= $value[3];
-			$laki_laki[$key]['bobot_postur']			= $value[4];
+			$laki_laki[$key]['bobot_jasmani']		= $value[4];
+			$laki_laki[$key]['bobot_postur']			= $value[3];
 		}
 		
 		// echo "TERNORMALISASI TERBOBOT PEREMPUAN";

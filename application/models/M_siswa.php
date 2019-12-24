@@ -8,7 +8,7 @@
 		$count = $this->db->get('siswa')->num_rows(
 		);
 		if($count==0){
-			$sql = "INSERT INTO siswa (NISN,email,HP,Kelas,Sekolah,Daerah,JK,TB,BB,Delegasi,Aktif_Sekolah,Izin_Ortu,Surat_Kesehatan,Biodata,Foto) VALUES ('$nisn','$email',$hp','$kelas','$sekolah','$daerah','$jk','$tb','$bb','$delegasi','$aktif_sekolah','$izin_ortu','$surat_kesehatan','$biodata','$foto')";
+			$sql = "INSERT INTO siswa (NISN,email,HP,Kelas,Sekolah,Daerah,JK,TB,BB,Delegasi,Aktif_Sekolah,Izin_Ortu,Surat_Kesehatan,Biodata,Foto) VALUES ('$nisn','$email','$hp','$kelas','$sekolah','$daerah','$jk','$tb','$bb','$delegasi','$aktif_sekolah','$izin_ortu','$surat_kesehatan','$biodata','$foto')";
 			$this->db->query($sql);
 		}else{
 			$sql = "UPDATE siswa SET email='$email' where NISN='$nisn'";
