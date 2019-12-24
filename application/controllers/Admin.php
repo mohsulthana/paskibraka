@@ -636,7 +636,9 @@ class Admin extends MY_Controller {
 				}
 				else{
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_perempuan[$x][0],$data_all_perempuan[$x][1],"Tidak Lulus by Sistem");
-					$this->db->where('NISN', $data_all_perempuan[$x][0])->update('keputusan', $perempuan[$key]);
+					for($i = 0; $i < count($perempuan); $i++) {
+						$this->db->where('NISN', $data_all_perempuan[$x][0])->update('keputusan', $perempuan[$i]);
+					}
 				}
 			}
 
@@ -649,7 +651,9 @@ class Admin extends MY_Controller {
 				}
 				else{
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_laki_laki[$x][0],$data_all_laki_laki[$x][1],"Tidak Lulus by Sistem");
-					$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$key]);
+					for($i = 0; $i < count($laki_laki); $i++) {
+						$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$key]);
+					}
 				}
 			}
 			redirect('Admin/perankingan','refresh');
