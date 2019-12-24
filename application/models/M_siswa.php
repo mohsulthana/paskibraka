@@ -17,7 +17,7 @@
 			$sql = "UPDATE siswa SET HP='$hp' where NISN='$nisn'";
 			$this->db->query($sql);
 
-			$sql = "UPDATE siswa SET Kelas='$hp' where NISN='$nisn'";
+			$sql = "UPDATE siswa SET Kelas='$kelas' where NISN='$nisn'";
 			$this->db->query($sql);
 
 			$sql = "UPDATE siswa SET Sekolah='$sekolah' where NISN='$nisn'";

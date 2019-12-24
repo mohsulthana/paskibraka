@@ -48,21 +48,21 @@
                         <td>
                           <form action="<?php echo base_url() ?>Admin/detail" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
-                            <input type="submit" value="detail" name="submit">
+                            <input type="submit" class="btn btn-primary" value="detail" name="submit">
                           </form>
                           <form action="<?php echo base_url() ?>Admin/hapusdata" method="post">
-                            <input type="submit" value="hapus" name="submit">
+                            <input type="submit" class="btn btn-danger" value="hapus" name="submit">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                           </form>
                           <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                           <form action="<?php echo base_url() ?>Admin/penilaian" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
-                            <input type="submit" value="Input Nilai" name="submit"></form>
+                            <input type="submit" class="btn btn-success" value="Input Nilai" name="submit"></form>
                           </form>
                           <?php } else if ($this->session->userdata()['role'] === 'Penilai' ) {?>
                           <form action="<?php echo base_url() ?>Admin/penilaian_penilai" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
-                            <input type="submit" value="Input Nilai" name="submit"></form>
+                            <input type="submit" class="btn btn-primary" value="Input Nilai" name="submit"></form>
                           </form>
                           <?php } ?>
 
@@ -77,7 +77,7 @@
 
                   </table>
                   <form action="<?php echo base_url() ?>Admin/algoritma_topsis" method="post">
-                    <input type="submit" class="btn btn-primary" value="PROSES" name="submit"></form>
+                    <input type="submit" class="btn btn-primary" class="btn btn-primary" value="PROSES" name="submit"></form>
                 </div>
               </div>
             </div>

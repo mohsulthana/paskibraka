@@ -3,9 +3,9 @@
 					{
 
 
-								 function registeruser($nisn,$nama_lengkap,$nama,$password){
+								 function registeruser($nisn,$namalengkap,$nama,$password){
 
-								 	$sql = "INSERT INTO user (NISN,Nama_Lengkap,Nama,Password) VALUES ('$nisn','$nama_lengkap','$nama','$password') ";
+								 	$sql = "INSERT INTO user (NISN,Nama_Lengkap,Nama,Password) VALUES ('$nisn','$namalengkap','$nama','$password') ";
 									
 								 	$result = $this->db->query($sql);
 								 	return $result;

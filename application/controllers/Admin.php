@@ -37,6 +37,7 @@ class Admin extends MY_Controller {
 		$x['id_bobot']=$_POST['id_bobot'];
 		$this->load->view('update_bobot',$x);
 	}
+	
 
 
 		public function insert_bobot(){
@@ -246,6 +247,7 @@ class Admin extends MY_Controller {
 
 			array_push($ternormalisasi_terbobot_perempuan, $temp_terbobot);
 		}
+
 		$ternormalisasi_terbobot_laki_laki=array();
 		for($x=0; $x<sizeof($alternatif_ternormalisasi_laki_laki); $x++){
 			$temp_terbobot = array();
@@ -262,6 +264,25 @@ class Admin extends MY_Controller {
 
 			array_push($ternormalisasi_terbobot_laki_laki, $temp_terbobot);
 		}
+		
+		foreach($ternormalisasi_terbobot_perempuan as $key => $value) {
+			$perempuan[$key] = [];
+			$perempuan[$key]['bobot_tertulis']		= $value[0];
+			$perempuan[$key]['bobot_wawancara']	= $value[1];
+			$perempuan[$key]['bobot_kesehatan']	= $value[2];
+			$perempuan[$key]['bobot_jasmani']		= $value[3];
+			$perempuan[$key]['bobot_postur']			= $value[4];
+		}
+		
+		foreach($ternormalisasi_terbobot_laki_laki as $key => $value) {
+			$laki_laki[$key] = [];
+			$laki_laki[$key]['bobot_tertulis']		= $value[0];
+			$laki_laki[$key]['bobot_wawancara']	= $value[1];
+			$laki_laki[$key]['bobot_kesehatan']	= $value[2];
+			$laki_laki[$key]['bobot_jasmani']		= $value[3];
+			$laki_laki[$key]['bobot_postur']			= $value[4];
+		}
+		
 		// echo "TERNORMALISASI TERBOBOT PEREMPUAN";
 		// print_r($ternormalisasi_terbobot_perempuan);
 		// echo "<br>";
@@ -609,18 +630,26 @@ class Admin extends MY_Controller {
 			for($x=0; $x<sizeof($data_all_perempuan); $x++){
 				if($x<26){
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_perempuan[$x][0],$data_all_perempuan[$x][1],"Lulus by Sistem");
+					for($i = 0; $i < count($perempuan); $i++) {
+						$this->db->where('NISN', $data_all_perempuan[$x][0])->update('keputusan', $perempuan[$i]);
+					}
 				}
 				else{
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_perempuan[$x][0],$data_all_perempuan[$x][1],"Tidak Lulus by Sistem");
+					$this->db->where('NISN', $data_all_perempuan[$x][0])->update('keputusan', $perempuan[$key]);
 				}
 			}
 
 			for($x=0; $x<sizeof($data_all_laki_laki); $x++){
 				if($x<26){
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_laki_laki[$x][0],$data_all_laki_laki[$x][1],"Lulus by Sistem");
+					for($i = 0; $i < count($laki_laki); $i++) {
+						$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$i]);
+					}
 				}
 				else{
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_laki_laki[$x][0],$data_all_laki_laki[$x][1],"Tidak Lulus by Sistem");
+					$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$key]);
 				}
 			}
 			redirect('Admin/perankingan','refresh');
