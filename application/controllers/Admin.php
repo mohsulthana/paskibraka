@@ -36,6 +36,8 @@ class Admin extends MY_Controller {
 
 		$x['id_bobot']=$_POST['id_bobot'];
 		$this->load->view('update_bobot',$x);
+		
+	
 	}
 	
 
@@ -790,7 +792,11 @@ class Admin extends MY_Controller {
 	}
 
 	public function inputuser(){
-		$this->load->view('inputuser');
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'inputuser';
+		$this->template($this->data);
+
+		
 	}
 
 	public function insert_user_baru(){
@@ -818,9 +824,12 @@ class Admin extends MY_Controller {
 	public function update_user(){
 
 		$x['nisn']=$_POST['nisn'];
-		$x['data_user'] = $this->M_user->lihatuserspes($_POST['nisn']);
+		$this->data['data_user'] = $this->M_user->lihatuserspes($_POST['nisn']);
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'update_user';
 
-		$this->load->view('update_user',$x);
+		
+		$this->template($this->data);
 	}
 
 	public function insert_user(){
