@@ -37,10 +37,10 @@
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data User</span></a></li>
                 
                 <?php } else if ($this->session->userdata()['role'] == 'Pimpinan'){?>
-                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_penilaian"><i
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_pimpinan"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan
                       Bobot</span></a></li>
-                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datap  endaftar"><i
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datapendaftarpimpinan"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data
                       Pendaftar</span></a></li>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/daftarnilai"><i

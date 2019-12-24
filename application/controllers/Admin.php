@@ -88,8 +88,10 @@ class Admin extends MY_Controller {
 
 
 	public function kriteria_pimpinan(){
-		$x['data_siswa']=$this->M_kriteria->get_all_kriteria();
-		$this->load->view('kriteria_pimpinan',$x);
+		$this->data['content']		= 'kriteria_pimpinan';
+		$this->data['title']			= 'Kriteria';
+		$this->data['data_siswa'] =$this->M_kriteria->get_all_kriteria();
+		$this->template($this->data);
 	}
 
 	public function algoritma_topsis (){
@@ -670,8 +672,10 @@ class Admin extends MY_Controller {
 
 	public function datapendaftarpimpinan()
 	{
-		$x['data_siswa']=$this->M_siswa->get_all_siswa();
-		$this->load->view('datapendaftarpimpinan',$x);
+		$this->data['data_siswa'] = $this->M_siswa->get_all_siswa();
+		$this->data['content']		= 'datapendaftarpimpinan';
+		$this->data['title']			= 'Data Pendaftar';
+		$this->template($this->data);
 	}
 
 
