@@ -652,7 +652,7 @@ class Admin extends MY_Controller {
 				else{
 					$this->M_keputusan_siswa->insert_keputusan ($data_all_laki_laki[$x][0],$data_all_laki_laki[$x][1],"Tidak Lulus by Sistem");
 					for($i = 0; $i < count($laki_laki); $i++) {
-						$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$key]);
+						$this->db->where('NISN', $data_all_laki_laki[$x][0])->update('keputusan', $laki_laki[$i]);
 					}
 				}
 			}
