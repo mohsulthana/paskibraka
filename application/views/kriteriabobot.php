@@ -21,7 +21,9 @@
                     <th data-field="nomor" data-editable="true">No.</th>
                     <th data-field="nama">Nama Kriteria</th>
                     <th data-field="bobot" data-editable="true">Bobot</th>
+                     <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                     <th data-field="action">Action</th>
+                    <?php } ?>
                   </tr>
                 </thead>
                 <tbody>
@@ -35,11 +37,15 @@
                     <td><?php echo $row["nama"]; ?></td>
                     <td><?php echo $row["bobot"]; ?></td>
                     <td>
+
+                  
+
+                 <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                       <form action="<?php echo base_url() ?>/Admin/input_bobot" method="post">
                         <input type="text" value="<?php echo $row["id_bobot"]; ?>" name="id_bobot" hidden>
                         <input type="submit" class="btn btn-primary" value="Update" name="submit">
                       </form>
-
+                      <?php } ?>
                     </td>
                   </tr>
                   <?php $nomor++; endforeach ?>

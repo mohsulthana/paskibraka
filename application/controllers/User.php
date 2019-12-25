@@ -177,8 +177,12 @@ class User extends MY_Controller {
 
 	public function tampilan_hasil(){
 		
-		$x['data_siswa']=$this->M_keputusan_siswa->lihat_ranking_siswa();
-		$this->load->view('User/hasil',$x);
+
+	$this->data['data_siswa']=$this->M_keputusan_siswa->lihat_ranking_siswa();
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'hasil';
+		
+		$this->template($this->data);
 	}
 
 }

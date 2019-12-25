@@ -34,11 +34,11 @@ class Admin extends MY_Controller {
 
 	public function input_bobot (){
 
-		$x['id_bobot']=$_POST['id_bobot'];
-		$this->load->view('update_bobot',$x);
-		
-	
-	}
+		$this->data['id_bobot']=$_POST['id_bobot'];
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'update_bobot';
+		$this->template($this->data);
+			}
 	
 
 
@@ -683,8 +683,10 @@ class Admin extends MY_Controller {
 
 	public function penilaian()
 	{
-		$x['nisn']=$_POST['nisn'];
-		$this->load->view('penilaian',$x);
+		$this->data['nisn']=$_POST['nisn'];
+		$this->data['content']		= 'penilaian';
+		$this->data['title']			= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->template($this->data);
 	}
 
 	public function detail(){
@@ -698,9 +700,11 @@ class Admin extends MY_Controller {
 
 		public function detailpimpinan(){
 		$nisn=$_POST['nisn'];
-		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
-
-		$this->load->view('detailpimpinan',$x);
+		$this->data['data_siswa']=$this->M_siswa->get_siswa($nisn);
+		$this->data['content']		= 'detailpimpinan';
+		$this->data['title']			= 'Detail Peserta';
+		$this->template($this->data);
+		
 	}
 
 	public function hapusdata(){
@@ -736,27 +740,38 @@ class Admin extends MY_Controller {
 
 	
 		public function kriteria_penilai(){
-		$x['data_siswa']=$this->M_kriteria->get_all_kriteria();
-		$this->load->view('kriteria_penilai',$x);
+		$this->data['data_siswa']=$this->M_kriteria->get_all_kriteria();
+		$this->data['content']				= 'kriteria_penilai';
+		$this->data['title']					= 'Paskibraka Provinsi Sumatera Selatan';
+		
+		$this->template($this->data);
 	}
 
 	public function datapendaftar_penilai()
 	{
-		$x['data_siswa']=$this->M_siswa->get_all_siswa();
-		$this->load->view('datapendaftar_penilai',$x);
+		$this->data['data_siswa']=$this->M_siswa->get_all_siswa();
+		$this->data['content']				= 'datapendaftar_penilai';
+		$this->data['title']					= 'Paskibraka Provinsi Sumatera Selatan';
+		
+		$this->template($this->data);
 	}
 
 	public function detail_penilai(){
 		$nisn=$_POST['nisn'];
-		$x['data_siswa']=$this->M_siswa->get_siswa($nisn);
-
-		$this->load->view('detail_penilai',$x);
+		$this->data['data_siswa']=$this->M_siswa->get_siswa($nisn);
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'detail_penilai';
+		$this->template($this->data);
 	}
 
 		public function penilaian_penilai()
 	{
-		$x['nisn']=$_POST['nisn'];
-		$this->load->view('penilaian_penilai',$x);
+		$this->data['nisn']=$_POST['nisn'];
+		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
+		$this->data['content']	= 'penilaian_penilai';
+		$this->template($this->data);
+
+	
 	}
 
 	public function insert_nilai_tim_penilai (){
