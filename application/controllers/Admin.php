@@ -38,10 +38,7 @@ class Admin extends MY_Controller {
 		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
 		$this->data['content']	= 'update_bobot';
 		$this->template($this->data);
-			}
-	
-
-
+	}
 		public function insert_bobot(){
 		//memasukkan data ke database
 		//$nisn,$wawancara,$tertulis,$kesehatan,$postur,$jasmani

@@ -41,7 +41,7 @@
                   
 
                  <?php if($this->session->userdata()['role'] === 'Admin') { ?>
-                      <form action="<?php echo base_url() ?>/Admin/input_bobot" method="post">
+                      <form action="<?php echo base_url() ?>Admin/input_bobot" method="post">
                         <input type="text" value="<?php echo $row["id_bobot"]; ?>" name="id_bobot" hidden>
                         <input type="submit" class="btn btn-primary" value="Update" name="submit">
                       </form>

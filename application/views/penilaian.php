@@ -69,20 +69,20 @@
 				<div class="left-sidebar-pro">
 								<nav id="sidebar" class="">
 												<div class="sidebar-header">
-																<a href="<?php echo base_url() ?>/Admin/home"><h3>Paskibraka SumSel</a>
+																<a href="<?php echo base_url() ?>Admin/home"><h3>Paskibraka SumSel</a>
 																<strong><img src="img/logo/logosn.png" alt="" /></strong>
 												</div>
 												<div class="left-custom-menu-adp-wrap comment-scrollbar">
 																<nav class="sidebar-nav left-sidebar-menu-pro">
 																				<ul class="metismenu" id="menu1">
 																								<li class="active">
-																												<a class="has-arrow" href="<?php echo base_url() ?>/Admin/home">
+																												<a class="has-arrow" href="<?php echo base_url() ?>Admin/home">
 																																			<i class="fa big-icon fa-home icon-wrap"></i>
 																																			<span class="mini-click-non">Pendaftaran</span>
 																																</a>
 																												<ul class="submenu-angle" aria-expanded="true">
-																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>/Admin/datapendaftar"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pendaftar</span></a></li>
-																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>/Admin/perankingan"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat Ranking</span></a></li>
+																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datapendaftar"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pendaftar</span></a></li>
+																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/perankingan"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat Ranking</span></a></li>
 																												</ul>
 																								</li>
 		
@@ -98,7 +98,7 @@
 												<div class="row">
 																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 																				<div class="logo-pro">
-																								<a href="<?php echo base_url() ?>/Admin/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+																								<a href="<?php echo base_url() ?>Admin/home"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
 																				</div>
 																</div>
 												</div>
@@ -120,9 +120,9 @@
 																																				<div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
 																																								<div class="header-top-menu tabl-d-n">
 																																												<ul class="nav navbar-nav mai-top-nav">
-																																																<li class="nav-item"><a href="<?php echo base_url() ?>/Admin/home" class="nav-link">Home</a>
+																																																<li class="nav-item"><a href="<?php echo base_url() ?>Admin/home" class="nav-link">Home</a>
 																																																</li>
-																																																<li class="nav-item"><a href="<?php echo base_url() ?>/Admin/tentang" class="nav-link">About</a>
+																																																<li class="nav-item"><a href="<?php echo base_url() ?>Admin/tentang" class="nav-link">About</a>
 																																																</li>
 																																												</ul>
 																																								</div>
@@ -172,9 +172,9 @@
 																																																												<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
 																																																								</a>
 																																																				<ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-																																																								<li><a href="<?php echo base_url() ?>/Admin/index"><span class="fa fa-user author-log-ic"></span>LOGIN</a>
+																																																								<li><a href="<?php echo base_url() ?>Admin/index"><span class="fa fa-user author-log-ic"></span>LOGIN</a>
 																																																								</li>
-																																																								<li><a href="<?php echo base_url() ?>/Admin/index"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+																																																								<li><a href="<?php echo base_url() ?>Admin/index"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
 																																																								</li>
 																																																				</ul>
 																																																</li>
@@ -224,7 +224,7 @@
 																																								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 																																												<div class="all-form-element-inner">
 																																													<h2>Penilaian NAMA PESERTA!</h2>
-																																																<form action="<?php echo base_url() ?>/Admin/insert_nilai_admin" method="post">
+																																																<form action="<?php echo base_url() ?>Admin/insert_nilai_admin" method="post">
 																																																				
 																																																					<div class="form-group-inner">
 																																																								<div class="row">

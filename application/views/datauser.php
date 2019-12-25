@@ -12,7 +12,7 @@
           </div>
           <div class="sparkline13-graph">
             <div class="datatable-dashv1-list custom-datatable-overright">
-              <form action="<?php echo base_url() ?>/Admin/inputuser" method="post">
+              <form action="<?php echo base_url() ?>Admin/inputuser" method="post">
                 <input type="submit" value="Input User" class="btn btn-primary" name="submit">
 
               </form>
@@ -65,11 +65,11 @@
                     <td>Team Penilai</td>
                     <?php } ?>
                     <td>
-                      <form action="<?php echo base_url() ?>/Admin/hapusdatauser" method="post">
+                      <form action="<?php echo base_url() ?>Admin/hapusdatauser" method="post">
                         <input type="submit" class="btn btn-danger" value="Hapus" name="submit">
                         <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                       </form>
-                      <form action="<?php echo base_url() ?>/Admin/update_user" method="post">
+                      <form action="<?php echo base_url() ?>Admin/update_user" method="post">
                         <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                         <input type="submit" class="btn btn-success" value="Update" name="submit">
                       </form>

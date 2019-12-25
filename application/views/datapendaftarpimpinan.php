@@ -48,7 +48,7 @@
                                                 <td><?php echo $row["Sekolah"]; ?></td>
                                                 <td><?php echo $row["Daerah"]; ?></td>
                                                 <td><?php echo $row["JK"]; ?></td>
-                                                <td> <form action="<?php echo base_url() ?>/Admin/detailpimpinan" method="post"> 
+                                                <td> <form action="<?php echo base_url() ?>Admin/detailpimpinan" method="post"> 
                                                 	<input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                                                 	<input type="submit" value="detail" name="submit">
                                                 </form>
