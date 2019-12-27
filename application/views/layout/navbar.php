@@ -31,7 +31,7 @@
                         <li class="nav-item"><a target="_blank" href="<?php echo base_url() ?>home"
                             class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item"><a target="_blank" href="<?php echo base_url() ?>Admin/tentang"
+                        <li class="nav-item"><a target="_blank" href="<?php echo base_url() ?>"
                             class="nav-link">About</a>
                         </li>
                       </ul>

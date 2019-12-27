@@ -4,7 +4,7 @@
  
           
           <div class="footer-copy-right">
-            <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Dispora SumSel</a> All rights
+            <p>Copyright &copy; <?= date('Y') ?> <a href="https://colorlib.com/wp/templates/">Dispora SumSel</a> All rights
               reserved.</p>
           </div>
         </div>

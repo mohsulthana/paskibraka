@@ -1,5 +1,5 @@
 
-								<!-- Batas Tanda -->
+							<!-- Batas Tanda -->
 								<div class="logo-pro">
 											<a href="index.html"><img class="main-logo" align="center" src="img/paskibraka.jpeg" alt="" /></a>
 								</div>
@@ -158,3 +158,6 @@
 								<!-- End Of Tanda -->
 
 	
+
+    <!-- Batas Tanda -->
+   

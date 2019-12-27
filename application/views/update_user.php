@@ -19,7 +19,7 @@
 																																								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 																																												<div class="all-form-element-inner">
 																																													
-																																																<form action="<?php echo base_url() ?>/Admin/insert_user" method="post">
+																																																<form action="<?php echo base_url() ?>Admin/insert_user" method="post">
 																																																				
 																																																			<?php 
 																																																				foreach ($data_user as $key => $row) { ?>

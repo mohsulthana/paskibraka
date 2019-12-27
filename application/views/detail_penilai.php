@@ -69,20 +69,20 @@
 							<div class="left-sidebar-pro">
 								<nav id="sidebar" class="">
 												<div class="sidebar-header">
-																<a href="<?php echo base_url() ?>/Admin/home"><h3>Paskibraka SumSel</a>
+																<a href="<?php echo base_url() ?>Admin/home"><h3>Paskibraka SumSel</a>
 																<strong><img src="img/logo/logosn.png" alt="" /></strong>
 												</div>
 												<div class="left-custom-menu-adp-wrap comment-scrollbar">
 																<nav class="sidebar-nav left-sidebar-menu-pro">
 																				<ul class="metismenu" id="menu1">
 																								<li class="active">
-																												<a class="has-arrow" href="<?php echo base_url() ?>/Admin/homepenilai">
+																												<a class="has-arrow" href="<?php echo base_url() ?>Admin/homepenilai">
 																																			<i class="fa big-icon fa-home icon-wrap"></i>
 																																			<span class="mini-click-non">Pendaftaran</span>
 																																</a>
 																												<ul class="submenu-angle" aria-expanded="true">
-																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>/Admin/kriteria_penilaian_penilai"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan Bobot</span></a></li>
-																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>/Admin/datapendaftar_penilai"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pendaftar</span></a></li>
+																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_penilaian_penilai"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan Bobot</span></a></li>
+																																<li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datapendaftar_penilai"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pendaftar</span></a></li>
 																															
 																												</ul>
 																								</li>
@@ -100,7 +100,7 @@
 												<div class="row">
 																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 																				<div class="logo-pro">
-																								<a href="<?php echo base_url() ?>/Admin/homepenilai"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+																								<a href="<?php echo base_url() ?>Admin/homepenilai"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
 																				</div>
 																</div>
 												</div>
@@ -122,9 +122,9 @@
 																																						<div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
 																																								<div class="header-top-menu tabl-d-n">
 																																												<ul class="nav navbar-nav mai-top-nav">
-																																																<li class="nav-item"><a href="<?php echo base_url() ?>/Admin/homepenilai" class="nav-link">Home</a>
+																																																<li class="nav-item"><a href="<?php echo base_url() ?>Admin/homepenilai" class="nav-link">Home</a>
 																																																</li>
-																																																<li class="nav-item"><a href="<?php echo base_url() ?>/Admin/tentangpenilai" class="nav-link">About</a>
+																																																<li class="nav-item"><a href="<?php echo base_url() ?>Admin/tentangpenilai" class="nav-link">About</a>
 																																																</li>
 																																												</ul>
 																																								</div>
@@ -175,7 +175,7 @@
 																																																								</a>
 																																																				<ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
 																																		
-																																																								<li><a href="<?php echo base_url() ?>/Admin/loginpenilai"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+																																																								<li><a href="<?php echo base_url() ?>Admin/loginpenilai"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
 																																																								</li>
 																																																				</ul>
 																																																</li>

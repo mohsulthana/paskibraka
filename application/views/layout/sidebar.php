@@ -20,7 +20,7 @@
                 <span class="mini-click-non">Pendaftaran</span>
               </a>
               <ul class="submenu-angle" aria-expanded="true">
-
+             
                 <?php if ($this->session->userdata()['role'] == 'User') {?>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>User/pendaftaran"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Form

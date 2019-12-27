@@ -20,7 +20,7 @@
 																																								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 																																												<div class="all-form-element-inner">
 																																										
-																																																<form action="<?php echo base_url() ?>/Admin/insert_bobot" method="post">
+																																																<form action="<?php echo base_url() ?>Admin/insert_bobot" method="post">
 																																																				
 																																																					<div class="form-group-inner">
 																																																								<div class="row">

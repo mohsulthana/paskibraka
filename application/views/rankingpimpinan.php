@@ -48,16 +48,24 @@
                     <td><?php echo $row["status_kelulusan"]; ?></td>
                     <td>
                       <div>
+
                          <?php if($this->session->userdata()['role'] === 'Pimpinan') { ?>
                         <form action="<?php echo base_url() ?>/Admin/status_lulus" method="post">
+
+                        <form action="<?php echo base_url() ?>Admin/status_lulus" method="post">
+
                           <input type="submit" class="btn btn-primary" value="Lulus" name="submit">
                           <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                         </form>
                          <?php } ?>
                       </div>
                       <div>
+
                          <?php if($this->session->userdata()['role'] === 'Pimpinan') { ?>
                         <form action="<?php echo base_url() ?>/Admin/status_tidak_lulus" method="post">
+
+                        <form action="<?php echo base_url() ?>Admin/status_tidak_lulus" method="post">
+
                           <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                           <input type="submit" class="btn btn-danger" value="Tidak Lulus" name="submit">
                            <?php } ?>
