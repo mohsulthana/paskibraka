@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="back-link back-backend">
-                    <a href="index.html" class="btn btn-primary">Back to Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">Kembali ke Login</a>
                 </div>
             </div>
         </div>
@@ -81,8 +81,8 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="text-center custom-login">
-                    <h3>Registration</h3>
-                    <p>Admin template with very clean and aesthetic style prepared for your next app. </p>
+                    <h3>Registrasi</h3>
+                    <p>Paskibraka Provinsi Sumatera Selatan</p>
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
@@ -117,7 +117,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+                <p>Copyright &copy; 2019 <a href="https://colorlib.com/wp/templates/">Dispora Sumsel</a> All rights reserved.</p>
             </div>
         </div>
     </div>

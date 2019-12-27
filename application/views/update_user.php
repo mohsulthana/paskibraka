@@ -10,13 +10,13 @@
 																								<div class="sparkline12-list">
 																												<div class="sparkline12-hd">
 																																<div class="main-sparkline12-hd">
-																																				<h1>Input User Baru</h1>
+																																				<h1>Update User </h1>
 																																</div>
 																												</div>
 																												<div class="sparkline12-graph">
 																																<div class="basic-login-form-ad">
 																																				<div class="row">
-																																								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																																								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 																																												<div class="all-form-element-inner">
 																																													
 																																																<form action="<?php echo base_url() ?>/Admin/insert_user" method="post">
@@ -86,7 +86,7 @@
 																																																																<div class="col-lg-9">
 																																																																				<div class="login-horizental cancel-wp pull-left">
 																																																																								<button class="btn btn-white" type="submit">Batal</button>
-																																																																								<button class="btn btn-sm btn-primary login-submit-cs" type="submit">Kirim</button>
+																																																																								<button class="btn btn-sm btn-primary login-submit-cs" type="submit">Update</button>
 																																																																				</div>
 																																																																</div>
 																																																												</div>

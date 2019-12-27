@@ -32,9 +32,12 @@
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
                       Hasil</span></a>
                 </li>
+
+
                 <?php } else if ($this->session->userdata()['role'] == 'Sistem'){?>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/lihatuser"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data User</span></a></li>
+
                 
                 <?php } else if ($this->session->userdata()['role'] == 'Pimpinan'){?>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_pimpinan"><i
@@ -46,9 +49,28 @@
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/daftarnilai"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daftar
                       Nilai</span></a>
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/perankingan"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
+                      Ranking</span></a></li>
+                    
+                <?php } else if ($this->session->userdata()['role'] == 'Admin'){?>
+                  <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_penilaian"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan
+                      Bobot</span></a></li>
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datapendaftar"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data
+                      Pendaftar</span></a></li>
+                
+                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/daftarnilai"><i
+                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daftar
+                      Nilai</span></a>
+                </li>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/rankingpimpinan"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
                       Ranking</span></a></li>
+
+              
+
                 <?php } else {?>
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/kriteria_penilaian"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Kriteria dan
@@ -56,9 +78,7 @@
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/datapendaftar"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data
                       Pendaftar</span></a></li>
-                <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/perankingan"><i
-                      class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lihat
-                      Ranking</span></a></li>
+                
                 <li><a title="Dashboard v.1" href="<?php echo base_url() ?>Admin/daftarnilai"><i
                       class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daftar
                       Nilai</span></a>

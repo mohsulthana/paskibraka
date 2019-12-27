@@ -19,6 +19,25 @@
 		}
 	}
 
+	function insert_nilai_terbobot ($NISN,$ID_Kriteria,$nilai_terbobot){
+		
+
+		$this->db->where('NISN',$NISN);
+		$this->db->where('ID_Kriteria',$ID_Kriteria);
+		$count = $this->db->get('nilai_terbobot')->num_rows(
+		);
+		if($count==0){
+			$sql = "INSERT INTO nilai_terbobot (NISN,ID_Kriteria,nilai_terbobot) VALUES ('$NISN','$ID_Kriteria','$nilai_terbobot')";
+			$this->db->query($sql);
+		}else{
+			
+			$sql = "UPDATE nilai_terbobot SET nilai_terbobot='$nilai_terbobot' where NISN='$NISN' and ID_Kriteria='$ID_Kriteria'";
+			$this->db->query($sql);
+			
+		}
+
+	}
+
 	function lihat_ranking_siswa($nisn){
 		$sql = "SELECT user.Nama,siswa.NISN,siswa.Sekolah,siswa.Daerah,siswa.JK,keputusan.status_kelulusan  FROM siswa,user,keputusan where siswa.NISN=keputusan.NISN and user.NISN=keputusan.NISN and user.nisn='$nisn' ORDER BY keputusan.Nilai_Akhir DESC";
 			$result = $this->db->query($sql)->result_array();

@@ -50,10 +50,12 @@
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                             <input type="submit" class="btn btn-primary" value="detail" name="submit">
                           </form>
+                          <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                           <form action="<?php echo base_url() ?>Admin/hapusdata" method="post">
                             <input type="submit" class="btn btn-danger" value="hapus" name="submit">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
                           </form>
+                           <?php } ?>
                           <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                           <form action="<?php echo base_url() ?>Admin/penilaian" method="post">
                             <input type="text" value="<?php echo $row["NISN"]; ?>" name="nisn" hidden>
@@ -76,8 +78,10 @@
                     </tbody>
 
                   </table>
+                   <?php if($this->session->userdata()['role'] === 'Admin') { ?>
                   <form action="<?php echo base_url() ?>Admin/algoritma_topsis" method="post">
                     <input type="submit" class="btn btn-primary" class="btn btn-primary" value="PROSES" name="submit"></form>
+                     <?php } ?>
                 </div>
               </div>
             </div>
