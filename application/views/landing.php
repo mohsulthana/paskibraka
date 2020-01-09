@@ -21,7 +21,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="<?= asset_url();?>landing/css/agency.min.css" rel="stylesheet">
+  <link href="<?= asset_url();?>landing/css/agency.css" rel="stylesheet">
 
 </head>
 
@@ -57,7 +57,7 @@
       <div class="intro-text">
         <div class="intro-lead-in">Sistem Pemilihan Keputusan</div>
         <div class="intro-heading text-uppercase">Paskibraka Sumsel</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="<?= base_url('login')?>">Pendaftaran?</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="<?= base_url('register')?>">Pendaftaran?</a>
       </div>
     </div>
   </header>
