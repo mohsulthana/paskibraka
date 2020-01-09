@@ -64,41 +64,37 @@
 
   <!-- Services -->
   <section class="page-section" id="services">
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Seputar Paskibraka</h2>
           
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="img-fluid" src="<?= asset_url();?>landing/img/foto3.jpeg" alt="">
-          </span>
-          <h4 class="service-heading">Apa itu Paskibraka?</h4>
-          <p class="text-muted">Paskibraka merupakan Pasukan Pengibaran Bendera Pusaka. Dalam menjadi anggota paskibraka, harus melalui beberapa tahap seleksi guna mencari potensi-potensi terbaik dari seluruh penjuru negeri, dari tingkat kabupaten/kota, provinsi hingga nasional. <a href="<?= base_url('Home/paskib')?>">klik untuk lebih lanjut...</a> </p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-             <img class="img-fluid" src="<?= asset_url();?>landing/img/foto.jpeg" alt="">
-          </span>
+
+      <div align="center">
+        <div class="col-md-10">
+          <span class="fa-stack fa-8x">
+             <img align="center" width="300" height="200" src="<?= asset_url();?>landing/img/foto3.jpeg" alt=""><br><br>
+          </span><br><br>
           <h4 class="service-heading">Tata Cara Pendaftaran</h4>
-          <p class="text-muted">Dalam melakukan pendaftaran, peserta dapat mengikuti beberapa cara seperti... <a href="<?= base_url('Home/daftar')?>">klik untuk lebih lanjut...</a></p>
+          <p >Untuk mendaftar dan menjadi bagian dari Paskibraka Provinsi Sumatera Selatan, peserta harus melakukan pendaftaran seperti dibawah ini: <br>
+            1. Peserta harus telah dinyatakan lulus dan merupakan delegasi tingkat kabupaten/kota.<br>
+            2. Peserta wajib melakukan registrasi akun dan mengisi form pendaftaran pada akun yang telah dimuat. <br>
+            3. Peserta mengisi form pendaftaran dengan data dan berkas-berkas yang dilampirkan, seperti surat resmi delegasi, surat kesehatan, foto, biodata, surat aktif sekolah dan surat izin orang tua.<br>
+            4. Peserta dapat melakukan update data apabila terdapat kekeliruan data.<br>
+            5. Setelah melakukan pengisian form, peserta akan melakukan tahap ujian sesuai dengan tanggal yang akan diumumkan.<br>
+            6. Setelah ujian dan penilaian telah dikumpulkan, peserta akan menerima hasil kelulusan pada kolom pengumuman pada akun masing-masing.<br>
+           
+           </p>
         </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="img-fluid" src="<?= asset_url();?>landing/img/foto8.jpeg" alt="">
-          </span>
-          <h4 class="service-heading">Pengumuman</h4>
-          <p class="text-muted">Hasil Pengumuman Penerimaan Paskibraka dapat dilihat melalui kolom Hasil Pengumuman pada masing-masing akun yang telah terdaftar.</p>
-        </div>
+        
       </div>
     </div>
   </section>
 
   <!-- Portfolio Grid -->
-  
+ 
 
   <!-- About -->
   <section class="page-section" id="about">

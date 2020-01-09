@@ -1,24 +1,18 @@
-<img class="main-logo" align="center" src="<?php echo base_url() ?>img/paskibraka.jpeg" alt="" style="display: block; margin: 5rem auto;" /></a>
-
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <div class="sparkline12-list">
-    <div class="sparkline12-hd">
-      <div class="main-sparkline12-hd">
-        <h1>Paskibraka Sumatera Selatan</h1>
+    <!-- Batas Tanda -->
+    
+    <a href="<?php echo base_url() ?>Admin/home"><br>    <img  width="500" height="400" class="main-logo" src="<?php echo base_url() ?>img/foto6.jpeg" style="display: block; margin: 30px auto;" alt="" /></a>
+    
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="sparkline12-list">
+        <div class="sparkline12-hd">
+          <div class="main-sparkline12-hd">
+            
+          </div>
+        </div>
+        <h1 align="center">Paskibraka Sumatera Selatan</h1>
+          <p >Paskibraka merupakan Pasukan Pengibaran Bendera Pusaka. Dalam menjadi anggota paskibraka, harus melalui beberapa tahap seleksi guna mencari potensi-potensi terbaik dari seluruh penjuru negeri, dari tingkat kabupaten/kota, provinsi hingga nasional. Seleksi paskibraka Provinsi Sumatera Selatan adalah seleksi yang dilaksanakan dari tingkat sekolah sampai dengan tingkat Nasional dengan materi seleksi yang meiputi tes tertulis, kebugaran jasmani, kesehatan, baris berbaris dan penilaian lainnya.  <br><br>
+            <img width="300" height="200" src="<?= asset_url();?>landing/img/foto5.jpeg" style="display: block; margin: 10px auto;" alt=""><br><br>
+          Seleksi paskibraka diikuti 17 Kabupaten/Kota. Kegiatan-kegiatan yang diadakan untuk peserta  anggota Paskibraka sangat beragam, mulai dari pengenalan kepribadian dengan renungan jiwa, pengukuhan secara resmi, pelatihan dan lainnya. </p>
       </div>
     </div>
-    <p> Upacara memperingati HUT RI setiap tanggal 17 Agustus adalah momentum bagi Pemuda untuk berkarya, menatap
-      masa depan Indonesia
-      dalam mengisi Keindahan dan memperkuat kemegahan rasa kemerdekaan. <br> Pasukan Pengibar Bendera Pusaka
-      (Paskibraka) Sumatera Selatan
-      terdiri dari kelompok 8, kelompok 17 dan kelompok pasukan 45 yang berasal dari TNI Polri.<br> Peserta
-      Paskibraka Sumatera Selatan berjumlah 50
-      orang yang terdiri dari kelompok Merah 25 orang sebagai TIM Pengibar Bendera merah Putih dan Kelompok Putih
-      berjumlah 25 orang sebagai TIM
-      penurunan Bendera Merah Putih. <br> Sebelum menjadi anggota Paskibraka peserta tentunya dilakukan seleksi
-      mulai dari tingkat sekolah sampai
-      tingkat Nasional. </p>
-  </div>
-</div>
-</div>
+    </div>

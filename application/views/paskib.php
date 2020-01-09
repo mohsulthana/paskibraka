@@ -64,40 +64,29 @@
 
   <!-- Services -->
   <section class="page-section" id="services">
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Seputar Paskibraka</h2>
           
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="img-fluid" src="<?= asset_url();?>landing/img/foto3.jpeg" alt="">
-          </span>
+
+      <div align="center">
+        <div class="col-md-10">
+          <span class="fa-stack fa-8x">
+             <img align="center" width="300" height="200" src="<?= asset_url();?>landing/img/foto3.jpeg" alt=""><br><br>
+          </span><br><br>
           <h4 class="service-heading">Apa itu Paskibraka?</h4>
-          <p class="text-muted">Paskibraka merupakan Pasukan Pengibaran Bendera Pusaka. Dalam menjadi anggota paskibraka, harus melalui beberapa tahap seleksi guna mencari potensi-potensi terbaik dari seluruh penjuru negeri, dari tingkat kabupaten/kota, provinsi hingga nasional. <a href="<?= base_url('Home/paskib')?>">klik untuk lebih lanjut...</a> </p>
+          <p >Paskibraka merupakan Pasukan Pengibaran Bendera Pusaka. Dalam menjadi anggota paskibraka, harus melalui beberapa tahap seleksi guna mencari potensi-potensi terbaik dari seluruh penjuru negeri, dari tingkat kabupaten/kota, provinsi hingga nasional. Seleksi paskibraka Provinsi Sumatera Selatan adalah seleksi yang dilaksanakan dari tingkat sekolah sampai dengan tingkat Nasional dengan materi seleksi yang meiputi tes tertulis, kebugaran jasmani, kesehatan, baris berbaris dan penilaian lainnya.  <br><br>
+            <img width="300" height="200" src="<?= asset_url();?>landing/img/foto5.jpeg" alt=""><br><br>
+          Seleksi paskibraka diikuti 17 Kabupaten/Kota. Kegiatan-kegiatan yang diadakan untuk peserta  anggota Paskibraka sangat beragam, mulai dari pengenalan kepribadian dengan renungan jiwa, pengukuhan secara resmi, pelatihan dan lainnya. </p>
         </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-             <img class="img-fluid" src="<?= asset_url();?>landing/img/foto.jpeg" alt="">
-          </span>
-          <h4 class="service-heading">Tata Cara Pendaftaran</h4>
-          <p class="text-muted">Dalam melakukan pendaftaran, peserta dapat mengikuti beberapa cara seperti... <a href="<?= base_url('Home/daftar')?>">klik untuk lebih lanjut...</a></p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="img-fluid" src="<?= asset_url();?>landing/img/foto8.jpeg" alt="">
-          </span>
-          <h4 class="service-heading">Pengumuman</h4>
-          <p class="text-muted">Hasil Pengumuman Penerimaan Paskibraka dapat dilihat melalui kolom Hasil Pengumuman pada masing-masing akun yang telah terdaftar.</p>
-        </div>
+        
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Grid -->
   
 
   <!-- About -->

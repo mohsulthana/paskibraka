@@ -11,4 +11,12 @@ class Home extends MY_Controller {
   {
     $this->load->view('landing');
   }
+
+  public function paskib(){
+  	$this->load->view('paskib');
+  }
+
+  public function daftar(){
+  	$this->load->view('daftar');
+  }
 }

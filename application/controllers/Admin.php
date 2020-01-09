@@ -19,6 +19,8 @@ class Admin extends MY_Controller {
 		}
 	}
 
+	
+
 	public function home()
 	{
 		$this->data['title']		= 'Paskibraka Provinsi Sumatera Selatan';
