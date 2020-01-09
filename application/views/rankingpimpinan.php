@@ -45,6 +45,7 @@
                     <td><?php echo $row["JK"]; ?></td>
                     <td><?php echo $row["Nilai_Akhir"]; ?></td>
                     <td><?php echo $row["status_kelulusan"]; ?></td>
+                    <?php if($this->session->userdata()['role'] === 'Pimpinan') { ?>
                     <td>
                       <div>
                         <?php if($this->session->userdata()['role'] === 'Pimpinan') { ?>
@@ -63,6 +64,7 @@
                           </form>
                       </div>
                     </td>
+                    <?php } ?>
                   </tr>
                   <?php $nomor++; endforeach ?>
                 </tbody>
