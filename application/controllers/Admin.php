@@ -298,6 +298,8 @@ class Admin extends MY_Controller {
 
 			array_push($ternormalisasi_terbobot_laki_laki, $temp_terbobot);
 		}
+			// var_dump($ternormalisasi_terbobot_); exit;
+
 		// foreach($ternormalisasi_terbobot_perempuan as $key => $value) {
 		// 	$perempuan[$key] = [];
 		// 	$perempuan[$key]['bobot_tertulis']		= $value[1];
@@ -641,6 +643,7 @@ class Admin extends MY_Controller {
 			$x++;
 			array_push($data_all_laki_laki, $data_temp);
 		}
+
 		//b,a = terbesar ke kecil, a,b= terkecil ke besar
 		usort($data_all_perempuan, function($b, $a){
 			if($a[1] == $b[1]){
@@ -753,6 +756,8 @@ class Admin extends MY_Controller {
 		public function rankingpimpinan()
 	{
 		$this->data['lihat_ranking']	=$this->M_keputusan_siswa->lihat_ranking();
+		// echo "<pre>";
+		// var_dump($this->data['lihat_ranking']); exit;
 		$this->data['content']				= 'rankingpimpinan';
 		$this->data['title']					= 'Paskibraka Provinsi Sumatera Selatan';
 		$this->template($this->data);

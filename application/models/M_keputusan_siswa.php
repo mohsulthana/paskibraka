@@ -58,7 +58,15 @@
 	}
 
 		function lihat_ranking(){
-			$sql = "SELECT user.Nama,siswa.NISN,siswa.Sekolah,siswa.Daerah,siswa.JK,keputusan.Nilai_Akhir,keputusan.status_kelulusan  FROM siswa,user,keputusan where siswa.NISN=keputusan.NISN and user.NISN=keputusan.NISN ORDER BY keputusan.Nilai_Akhir DESC";
+			$sql = "SELECT * FROM keputusan INNER JOIN nilai ON keputusan.NISN = nilai.NISN INNER JOIN user ON user.NISN = keputusan.NISN INNER JOIN siswa ON siswa.NISN = keputusan.NISN";
+			// $sql = "SELECT user.Nama,siswa.NISN,siswa.Sekolah,siswa.Daerah,siswa.JK,keputusan.Nilai_Akhir,keputusan.status_kelulusan
+			// -- FROM siswa,user,keputusan
+			// FROM siswa
+			// INNER JOIN keputusan ON siswa.NISN = keputusan.NISN
+			// -- INNER JOIN user ON user.NISN = keputusan.NISN
+			// INNER JOIN nilai ON nilai.NISN = keputusan.NISN
+			// where siswa.NISN=keputusan.NISN  and nilai.NISN = keputusan.NISN
+			// ORDER BY keputusan.Nilai_Akhir DESC";
 			$result = $this->db->query($sql)->result_array();
 			return $result;
 		}
